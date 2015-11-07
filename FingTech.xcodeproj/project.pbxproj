@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */; };
+		CEECE7E61BEDAF0900C5D581 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E51BEDAF0900C5D581 /* FirstViewController.swift */; };
+		CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */; };
+		CEECE7EB1BEDAF0A00C5D581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEECE7E91BEDAF0A00C5D581 /* Main.storyboard */; };
+		CEECE7ED1BEDAF0A00C5D581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */; };
+		CEECE7F01BEDAF0A00C5D581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */; };
+		CEECE7FB1BEDAF0A00C5D581 /* FingTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7FA1BEDAF0A00C5D581 /* FingTechTests.swift */; };
+		CEECE8061BEDAF0A00C5D581 /* FingTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE8051BEDAF0A00C5D581 /* FingTechUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEECE7F71BEDAF0A00C5D581 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEECE7D81BEDAF0900C5D581 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEECE7DF1BEDAF0900C5D581;
+			remoteInfo = FingTech;
+		};
+		CEECE8021BEDAF0A00C5D581 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEECE7D81BEDAF0900C5D581 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEECE7DF1BEDAF0900C5D581;
+			remoteInfo = FingTech;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEECE7E01BEDAF0900C5D581 /* FingTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEECE7E51BEDAF0900C5D581 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CEECE7EA1BEDAF0A00C5D581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEECE7EF1BEDAF0A00C5D581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEECE7F11BEDAF0A00C5D581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEECE7F61BEDAF0A00C5D581 /* FingTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEECE7FA1BEDAF0A00C5D581 /* FingTechTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingTechTests.swift; sourceTree = "<group>"; };
+		CEECE7FC1BEDAF0A00C5D581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEECE8011BEDAF0A00C5D581 /* FingTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEECE8051BEDAF0A00C5D581 /* FingTechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingTechUITests.swift; sourceTree = "<group>"; };
+		CEECE8071BEDAF0A00C5D581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEECE7DD1BEDAF0900C5D581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEECE7F31BEDAF0A00C5D581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEECE7FE1BEDAF0A00C5D581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEECE7D71BEDAF0900C5D581 = {
+			isa = PBXGroup;
+			children = (
+				CEECE7E21BEDAF0900C5D581 /* FingTech */,
+				CEECE7F91BEDAF0A00C5D581 /* FingTechTests */,
+				CEECE8041BEDAF0A00C5D581 /* FingTechUITests */,
+				CEECE7E11BEDAF0900C5D581 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEECE7E11BEDAF0900C5D581 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEECE7E01BEDAF0900C5D581 /* FingTech.app */,
+				CEECE7F61BEDAF0A00C5D581 /* FingTechTests.xctest */,
+				CEECE8011BEDAF0A00C5D581 /* FingTechUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEECE7E21BEDAF0900C5D581 /* FingTech */ = {
+			isa = PBXGroup;
+			children = (
+				CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */,
+				CEECE7E51BEDAF0900C5D581 /* FirstViewController.swift */,
+				CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */,
+				CEECE7E91BEDAF0A00C5D581 /* Main.storyboard */,
+				CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */,
+				CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */,
+				CEECE7F11BEDAF0A00C5D581 /* Info.plist */,
+			);
+			path = FingTech;
+			sourceTree = "<group>";
+		};
+		CEECE7F91BEDAF0A00C5D581 /* FingTechTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEECE7FA1BEDAF0A00C5D581 /* FingTechTests.swift */,
+				CEECE7FC1BEDAF0A00C5D581 /* Info.plist */,
+			);
+			path = FingTechTests;
+			sourceTree = "<group>";
+		};
+		CEECE8041BEDAF0A00C5D581 /* FingTechUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEECE8051BEDAF0A00C5D581 /* FingTechUITests.swift */,
+				CEECE8071BEDAF0A00C5D581 /* Info.plist */,
+			);
+			path = FingTechUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEECE7DF1BEDAF0900C5D581 /* FingTech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEECE80A1BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTech" */;
+			buildPhases = (
+				CEECE7DC1BEDAF0900C5D581 /* Sources */,
+				CEECE7DD1BEDAF0900C5D581 /* Frameworks */,
+				CEECE7DE1BEDAF0900C5D581 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FingTech;
+			productName = FingTech;
+			productReference = CEECE7E01BEDAF0900C5D581 /* FingTech.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEECE7F51BEDAF0A00C5D581 /* FingTechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEECE80D1BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTechTests" */;
+			buildPhases = (
+				CEECE7F21BEDAF0A00C5D581 /* Sources */,
+				CEECE7F31BEDAF0A00C5D581 /* Frameworks */,
+				CEECE7F41BEDAF0A00C5D581 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEECE7F81BEDAF0A00C5D581 /* PBXTargetDependency */,
+			);
+			name = FingTechTests;
+			productName = FingTechTests;
+			productReference = CEECE7F61BEDAF0A00C5D581 /* FingTechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEECE8001BEDAF0A00C5D581 /* FingTechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEECE8101BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTechUITests" */;
+			buildPhases = (
+				CEECE7FD1BEDAF0A00C5D581 /* Sources */,
+				CEECE7FE1BEDAF0A00C5D581 /* Frameworks */,
+				CEECE7FF1BEDAF0A00C5D581 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEECE8031BEDAF0A00C5D581 /* PBXTargetDependency */,
+			);
+			name = FingTechUITests;
+			productName = FingTechUITests;
+			productReference = CEECE8011BEDAF0A00C5D581 /* FingTechUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEECE7D81BEDAF0900C5D581 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = fixd;
+				TargetAttributes = {
+					CEECE7DF1BEDAF0900C5D581 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					CEECE7F51BEDAF0A00C5D581 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CEECE7DF1BEDAF0900C5D581;
+					};
+					CEECE8001BEDAF0A00C5D581 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CEECE7DF1BEDAF0900C5D581;
+					};
+				};
+			};
+			buildConfigurationList = CEECE7DB1BEDAF0900C5D581 /* Build configuration list for PBXProject "FingTech" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEECE7D71BEDAF0900C5D581;
+			productRefGroup = CEECE7E11BEDAF0900C5D581 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEECE7DF1BEDAF0900C5D581 /* FingTech */,
+				CEECE7F51BEDAF0A00C5D581 /* FingTechTests */,
+				CEECE8001BEDAF0A00C5D581 /* FingTechUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEECE7DE1BEDAF0900C5D581 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEECE7F01BEDAF0A00C5D581 /* LaunchScreen.storyboard in Resources */,
+				CEECE7ED1BEDAF0A00C5D581 /* Assets.xcassets in Resources */,
+				CEECE7EB1BEDAF0A00C5D581 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEECE7F41BEDAF0A00C5D581 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEECE7FF1BEDAF0A00C5D581 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEECE7DC1BEDAF0900C5D581 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */,
+				CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */,
+				CEECE7E61BEDAF0900C5D581 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEECE7F21BEDAF0A00C5D581 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEECE7FB1BEDAF0A00C5D581 /* FingTechTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEECE7FD1BEDAF0A00C5D581 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEECE8061BEDAF0A00C5D581 /* FingTechUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEECE7F81BEDAF0A00C5D581 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEECE7DF1BEDAF0900C5D581 /* FingTech */;
+			targetProxy = CEECE7F71BEDAF0A00C5D581 /* PBXContainerItemProxy */;
+		};
+		CEECE8031BEDAF0A00C5D581 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEECE7DF1BEDAF0900C5D581 /* FingTech */;
+			targetProxy = CEECE8021BEDAF0A00C5D581 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEECE7E91BEDAF0A00C5D581 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEECE7EA1BEDAF0A00C5D581 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEECE7EF1BEDAF0A00C5D581 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEECE8081BEDAF0A00C5D581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEECE8091BEDAF0A00C5D581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEECE80B1BEDAF0A00C5D581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FingTech/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixdapp.dev.FingTech;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CEECE80C1BEDAF0A00C5D581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FingTech/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixdapp.dev.FingTech;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CEECE80E1BEDAF0A00C5D581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FingTechTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixdapp.dev.FingTechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FingTech.app/FingTech";
+			};
+			name = Debug;
+		};
+		CEECE80F1BEDAF0A00C5D581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FingTechTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixdapp.dev.FingTechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FingTech.app/FingTech";
+			};
+			name = Release;
+		};
+		CEECE8111BEDAF0A00C5D581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FingTechUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixdapp.dev.FingTechUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FingTech;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CEECE8121BEDAF0A00C5D581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FingTechUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fixdapp.dev.FingTechUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FingTech;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEECE7DB1BEDAF0900C5D581 /* Build configuration list for PBXProject "FingTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEECE8081BEDAF0A00C5D581 /* Debug */,
+				CEECE8091BEDAF0A00C5D581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEECE80A1BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEECE80B1BEDAF0A00C5D581 /* Debug */,
+				CEECE80C1BEDAF0A00C5D581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEECE80D1BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEECE80E1BEDAF0A00C5D581 /* Debug */,
+				CEECE80F1BEDAF0A00C5D581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CEECE8101BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEECE8111BEDAF0A00C5D581 /* Debug */,
+				CEECE8121BEDAF0A00C5D581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEECE7D81BEDAF0900C5D581 /* Project object */;
+}

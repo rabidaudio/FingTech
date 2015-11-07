@@ -17,7 +17,6 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
@@ -40,19 +39,18 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell \(indexPath.row)!")
         
-        let card = items[indexPath.row]
-        let amount = 15.00
-        card.charge(amount) { (success:Bool) -> Void in
-            if(success){
-                UIAlertView(title: "Success", message: "Your card has been charged $\(amount).", delegate: nil, cancelButtonTitle: "Awesome!").show()
-            }else{
-                UIAlertView(title: "Failure", message: "There was a problem processing the payment. Your card has not been charged.", delegate: nil, cancelButtonTitle: "Dag, yo").show()
-            }
-        }
-        //TODO edit
     }
+    
+    //        let card = items[indexPath.row]
+    //        let amount = 15.00
+    //        card.charge(amount) { (success:Bool) -> Void in
+    //            if(success){
+    //                UIAlertView(title: "Success", message: "Your card has been charged $\(amount).", delegate: nil, cancelButtonTitle: "Awesome!").show()
+    //            }else{
+    //                UIAlertView(title: "Failure", message: "There was a problem processing the payment. Your card has not been charged.", delegate: nil, cancelButtonTitle: "Dag, yo").show()
+    //            }
+    //        }
 
 }
 

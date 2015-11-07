@@ -10,6 +10,7 @@
 		CEEB69501BEE7318001EDC68 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB694F1BEE7318001EDC68 /* CreditCard.swift */; };
 		CEEB6A1B1BEE7A39001EDC68 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A0E1BEE79C4001EDC68 /* Alamofire.framework */; };
 		CEEB6A1C1BEE7A39001EDC68 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A0E1BEE79C4001EDC68 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEEB6A211BEEA29F001EDC68 /* EditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB6A201BEEA29F001EDC68 /* EditCardViewController.swift */; };
 		CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */; };
 		CEECE7E61BEDAF0900C5D581 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */; };
 		CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */; };
@@ -110,6 +111,7 @@
 /* Begin PBXFileReference section */
 		CEEB694F1BEE7318001EDC68 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		CEEB6A031BEE79C4001EDC68 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		CEEB6A201BEEA29F001EDC68 /* EditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCardViewController.swift; sourceTree = "<group>"; };
 		CEECE7E01BEDAF0900C5D581 /* FingTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */,
 				CEECE7F11BEDAF0A00C5D581 /* Info.plist */,
 				CEEB694F1BEE7318001EDC68 /* CreditCard.swift */,
+				CEEB6A201BEEA29F001EDC68 /* EditCardViewController.swift */,
 			);
 			path = FingTech;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			files = (
 				CEEB69501BEE7318001EDC68 /* CreditCard.swift in Sources */,
 				CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */,
+				CEEB6A211BEEA29F001EDC68 /* EditCardViewController.swift in Sources */,
 				CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */,
 				CEECE7E61BEDAF0900C5D581 /* CardsViewController.swift in Sources */,
 			);

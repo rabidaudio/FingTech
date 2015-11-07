@@ -29,18 +29,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" selectedImage="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Your Cards" id="GH4-Fr-mxI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bLb-fK-m9N">
+                            <connections>
+                                <segue destination="0o1-9s-NVO" kind="show" id="qFI-P1-x0z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="2MC-WB-oy4" id="O6q-Te-m44"/>
-                        <segue destination="0o1-9s-NVO" kind="popoverPresentation" id="nWp-KR-GMF">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="782" y="-315"/>
+            <point key="canvasLocation" x="1594" y="-315"/>
         </scene>
         <!--Edit/Add Card-->
         <scene sceneID="s1O-ML-pss">
@@ -54,64 +57,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Xp-4E-fMb">
-                                <rect key="frame" x="119" y="210" width="360" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Xp-4E-fMb">
+                                <rect key="frame" x="126" y="203" width="349" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plX-RQ-zub">
-                                <rect key="frame" x="119" y="248" width="360" height="30"/>
+                                <rect key="frame" x="126" y="241" width="349" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YhO-E7-DsS">
-                                <rect key="frame" x="306" y="324" width="94" height="29"/>
+                                <rect key="frame" x="129" y="318" width="94" height="29"/>
                                 <connections>
-                                    <action selector="StepperChanged:" destination="0o1-9s-NVO" eventType="valueChanged" id="L4C-5M-izO"/>
+                                    <action selector="stepperChanged:" destination="0o1-9s-NVO" eventType="valueChanged" id="whk-W9-77M"/>
                                 </connections>
                             </stepper>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Y8E-3k-a4G">
-                                <rect key="frame" x="306" y="361" width="94" height="29"/>
+                                <rect key="frame" x="249" y="318" width="94" height="29"/>
                                 <connections>
-                                    <action selector="StepperChanged:" destination="0o1-9s-NVO" eventType="valueChanged" id="GK4-rS-VGx"/>
+                                    <action selector="stepperChanged:" destination="0o1-9s-NVO" eventType="valueChanged" id="n5o-LJ-qFW"/>
                                 </connections>
                             </stepper>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMW-ZB-2Sh">
-                                <rect key="frame" x="119" y="286" width="172" height="30"/>
+                                <rect key="frame" x="376" y="279" width="99" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIl-Md-2HS">
-                                <rect key="frame" x="306" y="286" width="173" height="30"/>
+                                <rect key="frame" x="376" y="318" width="99" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expires:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7b-cS-WP1">
-                                <rect key="frame" x="119" y="328" width="172" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="129" y="283" width="172" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="XX / XXXX" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fc-da-Bng">
-                                <rect key="frame" x="202" y="328" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="254" y="283" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Month" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjj-pw-ES5">
-                                <rect key="frame" x="408" y="328" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="249" y="351" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INk-PN-8qp">
-                                <rect key="frame" x="408" y="365" width="73" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="129" y="351" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dG-yg-78x">
-                                <rect key="frame" x="276" y="398" width="49" height="30"/>
+                                <rect key="frame" x="276" y="384" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submit:" destination="0o1-9s-NVO" eventType="touchDown" id="ScL-DQ-Vcx"/>
@@ -125,14 +128,14 @@
                         <outlet property="cvvField" destination="mMW-ZB-2Sh" id="MIy-5T-YLd"/>
                         <outlet property="expiresText" destination="8Fc-da-Bng" id="JeH-to-a9y"/>
                         <outlet property="monthStepper" destination="YhO-E7-DsS" id="3qd-3T-cV8"/>
-                        <outlet property="nameField" destination="8Xp-4E-fMb" id="NHC-RP-nEM"/>
+                        <outlet property="nameField" destination="8Xp-4E-fMb" id="Lav-Zu-vxl"/>
                         <outlet property="yearStepper" destination="Y8E-3k-a4G" id="L2E-Qt-5an"/>
                         <outlet property="zipField" destination="QIl-Md-2HS" id="J9J-TT-e8h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KhG-cL-4gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="-315"/>
+            <point key="canvasLocation" x="2289" y="-315"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -188,13 +191,46 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Sxn-7H-jgK" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="CFt-E7-STj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sxn-7H-jgK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="First" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7kx-Zg-6H3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="9dB-7Y-ttA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9B-BQ-IAz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-315"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iko-Km-1A5">
+            <objects>
+                <viewController id="0uj-ns-kdI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPW-7p-jbn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfe-rR-Nfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2867.5" y="-315.5"/>
         </scene>
     </scenes>
     <resources>

@@ -39,14 +39,16 @@ class EditCardViewController: UIViewController {
         monthStepper.minimumValue = 1
         monthStepper.wraps = true
         
-        monthStepper.value = Double(NSCalendar.currentCalendar().component(.Year, fromDate: NSDate()))
-        monthStepper.maximumValue = 9999
-        monthStepper.minimumValue = 1
-        monthStepper.wraps = true
+        yearStepper.value = Double(NSCalendar.currentCalendar().component(.Year, fromDate: NSDate()))
+        yearStepper.maximumValue = 9999
+        yearStepper.minimumValue = 1
+        yearStepper.wraps = true
+        
+        stepperChanged(monthStepper)
     }
     
-    @IBAction func StepperChanged(sender: UIStepper) {
-        expiresText.text = "\(month) / \(year)"
+    @IBAction func stepperChanged(sender: UIStepper) {
+        expiresText.text = String(format: "%02d / %04d", month, year)
     }
     
     @IBAction func submit(sender: UIButton) {

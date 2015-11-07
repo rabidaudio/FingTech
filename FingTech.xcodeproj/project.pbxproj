@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEEB69501BEE7318001EDC68 /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB694F1BEE7318001EDC68 /* CreditCard.swift */; };
 		CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */; };
 		CEECE7E61BEDAF0900C5D581 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E51BEDAF0900C5D581 /* FirstViewController.swift */; };
 		CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CEEB694F1BEE7318001EDC68 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		CEECE7E01BEDAF0900C5D581 /* FingTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEECE7E51BEDAF0900C5D581 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */,
 				CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */,
 				CEECE7F11BEDAF0A00C5D581 /* Info.plist */,
+				CEEB694F1BEE7318001EDC68 /* CreditCard.swift */,
 			);
 			path = FingTech;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEB69501BEE7318001EDC68 /* CreditCard.swift in Sources */,
 				CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */,
 				CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */,
 				CEECE7E61BEDAF0900C5D581 /* FirstViewController.swift in Sources */,
@@ -488,6 +492,7 @@
 				CEECE80C1BEDAF0A00C5D581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEECE80D1BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTechTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				CEECE80F1BEDAF0A00C5D581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEECE8101BEDAF0A00C5D581 /* Build configuration list for PBXNativeTarget "FingTechUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				CEECE8121BEDAF0A00C5D581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

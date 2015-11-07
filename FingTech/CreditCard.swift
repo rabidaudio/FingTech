@@ -57,9 +57,9 @@ class CreditCard {
     
     var zipcode = 78759
     
-    private func parameters(ammount:Double) -> [String:AnyObject] {
+    private func parameters(amount:Double) -> [String:AnyObject] {
         return [
-            "ammount": ammount,
+            "amount": amount,
             "card": [
                 "number": "\(cardNumber)",
                 "cvv": "\(cvv)",
@@ -79,8 +79,11 @@ class CreditCard {
         ]
     }
     
-    func charge(ammount:Double, completionHandler: Response<AnyObject, NSError> -> Void) {
-        Alamofire.request(.POST, chargeEndpoint, headers: headers, parameters: parameters(ammount), encoding: .JSON)
-            .responseJSON(completionHandler: completionHandler)
+    func charge(amount:Double, completionHandler: Bool -> Void) {
+        Alamofire.request(.POST, chargeEndpoint, headers: headers, parameters: parameters(amount), encoding: .JSON)
+            .responseJSON { (response:Response<AnyObject, NSError>) -> Void in
+                print(response)
+                completionHandler(response.result.value?["result"] as? String == "APPROVED")
+        }
     }
 }

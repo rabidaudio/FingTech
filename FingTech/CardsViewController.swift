@@ -42,6 +42,8 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    //UIAlertController(title: "Success", message: "You are validated!", preferredStyle: UIAlertControllerStyle.Alert)
+    
     //        let card = items[indexPath.row]
     //        let amount = 15.00
     //        card.charge(amount) { (success:Bool) -> Void in

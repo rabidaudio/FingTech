@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwiftValidator
 
-class EditCardViewController: UIViewController {
+class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var cardNumberField: UITextField!
@@ -18,6 +19,14 @@ class EditCardViewController: UIViewController {
     @IBOutlet weak var yearStepper: UIStepper!
     
     @IBOutlet weak var expiresText: UILabel!
+    
+    let validator = Validator()
+    
+    var textFields:[UITextField] {
+        get {
+            return [nameField, cardNumberField, cvvField, zipField]
+        }
+    }
     
     var month:Int {
         get {
@@ -33,6 +42,15 @@ class EditCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "hideKeyboard"))
+
+        textFields.forEach({$0.delegate = self })
+        
+        validator.registerField(nameField, rules: [RequiredRule()])
+        validator.registerField(cardNumberField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 16), MaxLengthRule(length: 16)])
+        validator.registerField(cvvField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 3), MaxLengthRule(length: 4)])
+        validator.registerField(zipField, rules: [RequiredRule(), ZipCodeRule()])
         
         monthStepper.value = Double(NSCalendar.currentCalendar().component(.Month, fromDate: NSDate()))
         monthStepper.maximumValue = 12
@@ -52,6 +70,10 @@ class EditCardViewController: UIViewController {
     }
     
     @IBAction func submit(sender: UIButton) {
+        validator.validate(self)
+    }
+    
+    func validationSuccessful() {
         
         let card = CreditCard()
         
@@ -65,5 +87,24 @@ class EditCardViewController: UIViewController {
         print(card)
         
         //TODO store card
+    }
+    
+    func validationFailed(errors:[UITextField:ValidationError]) {
+        // turn the fields to red
+        for (field, _) in validator.errors {
+            let errorColor = UIColor.redColor().colorWithAlphaComponent(0.25).CGColor
+            field.layer.backgroundColor = errorColor
+//            error.errorLabel?.text = error.errorMessage // works if you added labels
+//            error.errorLabel?.hidden = false
+        }
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField){
+        textField.layer.borderColor = nil
+        textField.layer.borderWidth = 0
+    }
+    
+    func hideKeyboard(){
+        view.endEditing(true)
     }
 }

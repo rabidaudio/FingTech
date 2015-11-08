@@ -11,6 +11,8 @@
 		CEEB6A1B1BEE7A39001EDC68 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A0E1BEE79C4001EDC68 /* Alamofire.framework */; };
 		CEEB6A1C1BEE7A39001EDC68 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A0E1BEE79C4001EDC68 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEEB6A211BEEA29F001EDC68 /* EditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB6A201BEEA29F001EDC68 /* EditCardViewController.swift */; };
+		CEEB6A311BEEC6AA001EDC68 /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A2E1BEEC691001EDC68 /* SwiftValidator.framework */; };
+		CEEB6A321BEEC6AA001EDC68 /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A2E1BEEC691001EDC68 /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */; };
 		CEECE7E61BEDAF0900C5D581 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */; };
 		CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */; };
@@ -78,6 +80,41 @@
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
+		CEEB6A291BEEC691001EDC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 62D1AE171A1E6D4400E4DFF8;
+			remoteInfo = Validator;
+		};
+		CEEB6A2B1BEEC691001EDC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 62D1AE2C1A1E6D4500E4DFF8;
+			remoteInfo = ValidatorTests;
+		};
+		CEEB6A2D1BEEC691001EDC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB465CB31B9884F400398388;
+			remoteInfo = SwiftValidator;
+		};
+		CEEB6A2F1BEEC691001EDC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB465CBD1B9884F400398388;
+			remoteInfo = SwiftValidatorTests;
+		};
+		CEEB6A331BEEC6AB001EDC68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FB465CB21B9884F400398388;
+			remoteInfo = SwiftValidator;
+		};
 		CEECE7F71BEDAF0A00C5D581 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEECE7D81BEDAF0900C5D581 /* Project object */;
@@ -102,6 +139,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CEEB6A1C1BEE7A39001EDC68 /* Alamofire.framework in Embed Frameworks */,
+				CEEB6A321BEEC6AA001EDC68 /* SwiftValidator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +150,7 @@
 		CEEB694F1BEE7318001EDC68 /* CreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
 		CEEB6A031BEE79C4001EDC68 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		CEEB6A201BEEA29F001EDC68 /* EditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCardViewController.swift; sourceTree = "<group>"; };
+		CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Validator.xcodeproj; path = SwiftValidator/Validator.xcodeproj; sourceTree = "<group>"; };
 		CEECE7E01BEDAF0900C5D581 /* FingTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEB6A1B1BEE7A39001EDC68 /* Alamofire.framework in Frameworks */,
+				CEEB6A311BEEC6AA001EDC68 /* SwiftValidator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +208,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		CEEB6A231BEEC690001EDC68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEEB6A2A1BEEC691001EDC68 /* Validator.app */,
+				CEEB6A2C1BEEC691001EDC68 /* ValidatorTests.xctest */,
+				CEEB6A2E1BEEC691001EDC68 /* SwiftValidator.framework */,
+				CEEB6A301BEEC691001EDC68 /* SwiftValidatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CEECE7D71BEDAF0900C5D581 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +226,7 @@
 				CEECE7F91BEDAF0A00C5D581 /* FingTechTests */,
 				CEECE8041BEDAF0A00C5D581 /* FingTechUITests */,
 				CEECE7E11BEDAF0900C5D581 /* Products */,
+				CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */,
 				CEEB6A031BEE79C4001EDC68 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -239,6 +291,7 @@
 			);
 			dependencies = (
 				CEEB6A1E1BEE7A39001EDC68 /* PBXTargetDependency */,
+				CEEB6A341BEEC6AB001EDC68 /* PBXTargetDependency */,
 			);
 			name = FingTech;
 			productName = FingTech;
@@ -320,6 +373,10 @@
 					ProductGroup = CEEB6A041BEE79C4001EDC68 /* Products */;
 					ProjectRef = CEEB6A031BEE79C4001EDC68 /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = CEEB6A231BEEC690001EDC68 /* Products */;
+					ProjectRef = CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -378,6 +435,34 @@
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
 			remoteRef = CEEB6A191BEE79C4001EDC68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEEB6A2A1BEEC691001EDC68 /* Validator.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = Validator.app;
+			remoteRef = CEEB6A291BEEC691001EDC68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEEB6A2C1BEEC691001EDC68 /* ValidatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ValidatorTests.xctest;
+			remoteRef = CEEB6A2B1BEEC691001EDC68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEEB6A2E1BEEC691001EDC68 /* SwiftValidator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftValidator.framework;
+			remoteRef = CEEB6A2D1BEEC691001EDC68 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CEEB6A301BEEC691001EDC68 /* SwiftValidatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftValidatorTests.xctest;
+			remoteRef = CEEB6A2F1BEEC691001EDC68 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -445,6 +530,11 @@
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
 			targetProxy = CEEB6A1D1BEE7A39001EDC68 /* PBXContainerItemProxy */;
+		};
+		CEEB6A341BEEC6AB001EDC68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftValidator;
+			targetProxy = CEEB6A331BEEC6AB001EDC68 /* PBXContainerItemProxy */;
 		};
 		CEECE7F81BEDAF0A00C5D581 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -1,3 +1,6 @@
 [submodule "Alamofire"]
 	path = Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
+[submodule "SwiftValidator"]
+	path = SwiftValidator
+	url = https://github.com/jpotts18/SwiftValidator.git

@@ -24,11 +24,11 @@ class CreditCard {
     
     var holderName:String = "John Doe"
     
-    var cardNumber:Int64 = 4111111111111111
+    var number:Int64 = 4111111111111111
     
     var encodedNumber:String {
         get {
-            var stringNumber = "\(cardNumber)"
+            var stringNumber = "\(number)"
             let rangeOfX = stringNumber.startIndex...stringNumber.endIndex.advancedBy(-4)
             stringNumber.replaceRange(rangeOfX, with: rangeOfX.map({_ in fillerCharacter}).joinWithSeparator(""))
             return stringNumber
@@ -61,7 +61,7 @@ class CreditCard {
         return [
             "amount": amount,
             "card": [
-                "number": "\(cardNumber)",
+                "number": "\(number)",
                 "cvv": "\(cvv)",
                 "expirationDate": expireDate,
                 "address":[

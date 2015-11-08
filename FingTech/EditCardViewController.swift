@@ -22,6 +22,8 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
     
     let validator = Validator()
     
+    var card:CreditCard?
+    
     var textFields:[UITextField] {
         get {
             return [nameField, cardNumberField, cvvField, zipField]
@@ -51,6 +53,10 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "hideKeyboard"))
         
+        if(card != nil){
+            populateFields(card!)
+        }
+        
         validator.registerField(nameField, rules: [RequiredRule()])
         validator.registerField(cardNumberField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 16), MaxLengthRule(length: 16)])
         validator.registerField(cvvField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 3), MaxLengthRule(length: 4)])
@@ -76,18 +82,34 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
     
     func validationSuccessful() {
         
-        let card = CreditCard()
+        if(card == nil){
+            card = populateCard(CreditCard())
+        }else{
+            card = populateCard(card!)
+        }
+        print(card)
         
+        //TODO store card
+    }
+    
+    func populateFields(card: CreditCard){
+        nameField.text = card.holderName
+        cardNumberField.text = String(card.number)
+        cvvField.text = String(card.cvv)
+        zipField.text = String(card.zipcode)
+        month = card.expireMonth
+        year = card.expireYear
+    }
+    
+    func populateCard(card: CreditCard) -> CreditCard {
         card.holderName = nameField.text!
-        card.cardNumber = Int64(cardNumberField.text!)!
+        card.number = Int64(cardNumberField.text!)!
         card.cvv = Int(cvvField.text!)!
         card.zipcode = Int(zipField.text!)!
         card.expireMonth = month
         card.expireYear = year
         
-        print(card)
-        
-        //TODO store card
+        return card
     }
     
     func validationFailed(errors:[UITextField:ValidationError]) {

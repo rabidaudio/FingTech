@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import LocalAuthentication
 
 class EditCardViewController: UIViewController, ValidationDelegate {
     
@@ -22,7 +23,9 @@ class EditCardViewController: UIViewController, ValidationDelegate {
     
     let validator = Validator()
     
-    var card:CreditCard?
+    let context = LAContext()
+    
+    var card : CreditCard?
     
     var month:Int {
         get {
@@ -81,9 +84,49 @@ class EditCardViewController: UIViewController, ValidationDelegate {
     
     func validationSuccessful() {
         if(card == nil){
-            populateCard(CreditCard())
+            card = populateCard(CreditCard())
         }else{
-            populateCard(card!)
+            card = populateCard(card!)
+        }
+        
+        var error = NSError?()
+        let reasonString = "Attach a fingerprint to this card"
+        
+        if context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+            [context .evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: { (success: Bool, evalPolicyError: NSError?) -> Void in
+                
+                if success {
+                    CardSource.saveCard(self.card!)
+                    self.navigationController!.popViewControllerAnimated(true) //close window
+                }
+                else{
+                    print(evalPolicyError?.localizedDescription)
+                    
+                    switch evalPolicyError!.code {
+                        
+                    case LAError.SystemCancel.rawValue:
+                        fallthrough
+                        
+                    case LAError.UserCancel.rawValue:
+                        UIAlertView(title: "Error", message: "There was a problem Adding the card", delegate: nil, cancelButtonTitle: "Cancel").show()
+                        
+                    case LAError.UserFallback.rawValue:
+                        UIAlertView(title: "Error", message: "Fingerprint Reqired", delegate: nil, cancelButtonTitle: "Cancel").show()
+                        //                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        //                            self.showPasswordAlert()
+                        //                        })
+                        
+                    default:
+                        UIAlertView(title: "Error", message: "Problem reading fingerprint. Please try again", delegate: nil, cancelButtonTitle: "Cancel").show()
+                        //                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        //                            self.showPasswordAlert()
+                        //                        })
+                    }
+                }
+                
+            })]
+        }else{
+            UIAlertView(title: "Error", message: "Fingerprint technology not available on this device.", delegate: nil, cancelButtonTitle: "Cancel").show()
         }
     }
     
@@ -97,7 +140,7 @@ class EditCardViewController: UIViewController, ValidationDelegate {
         updateExires()
     }
     
-    func populateCard(card: CreditCard) {
+    func populateCard(card: CreditCard) -> CreditCard {
         card.holderName = nameField.text!
         card.number = Int64(cardNumberField.text!)!
         card.cvv = Int(cvvField.text!)!
@@ -105,8 +148,7 @@ class EditCardViewController: UIViewController, ValidationDelegate {
         card.expireMonth = month
         card.expireYear = year
         
-        CardSource.saveCard(card)
-        navigationController!.popViewControllerAnimated(true) //close window
+        return card
     }
     
     func validationFailed(errors:[UITextField:ValidationError]) {

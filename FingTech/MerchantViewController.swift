@@ -19,7 +19,7 @@ class MerchantViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     let context : LAContext = LAContext()
     
-    var currentCard: CreditCard?
+//    var currentCard: CreditCard?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class MerchantViewController: UIViewController, UIPickerViewDataSource, UIPicker
             [context .evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString, reply: { (success: Bool, evalPolicyError: NSError?) -> Void in
                 
                 if success {
-                    
+                    //yay!
                 }
                 else{
                     print(evalPolicyError?.localizedDescription)
@@ -66,21 +66,22 @@ class MerchantViewController: UIViewController, UIPickerViewDataSource, UIPicker
 
     func showError(message: String){
         UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "Cancel").show()
-        view.hidden = true
+//        view.hidden = true
     }
     
     @IBAction func makePayment(sender: UIButton) {
-        if(currentCard != nil){
-            currentCard?.charge(paymentAmount, completionHandler: { (success:Bool) -> Void in
+        let currentCard = cards[row]
+//        if(currentCard != nil){
+            currentCard.charge(paymentAmount, completionHandler: { (success:Bool) -> Void in
                 if(success){
                     UIAlertView(title: "Success", message: "Your card has been charged $\(self.paymentAmount).", delegate: nil, cancelButtonTitle: "Awesome!").show()
                 }else{
                     UIAlertView(title: "Failure", message: "There was a problem processing the payment. Your card has not been charged.", delegate: nil, cancelButtonTitle: "Dag, yo").show()
                 }
             })
-        }else{
-            UIAlertView(title: "Failure", message: "Please select a card first!", delegate: nil, cancelButtonTitle: "Sorry...").show()
-        }
+//        }else{
+//            UIAlertView(title: "Failure", message: "Please select a card first!", delegate: nil, cancelButtonTitle: "Sorry...").show()
+//        }
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -93,9 +94,13 @@ class MerchantViewController: UIViewController, UIPickerViewDataSource, UIPicker
         return cards[row].encodedNumber
     }
     
+    var row = 0
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("selected \(row)")
+        self.row = row
         //on clicked
-        currentCard = cards[row]
+//        currentCard = cards[row]
     }
     
     //UIAlertController(title: "Success", message: "You are validated!", preferredStyle: UIAlertControllerStyle.Alert)

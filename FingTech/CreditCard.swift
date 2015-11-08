@@ -24,7 +24,7 @@ class CreditCard {
     
     var holderName:String = "John Doe"
     
-    var cardNumber:Int = 4111111111111111
+    var cardNumber:Int64 = 4111111111111111
     
     var encodedNumber:String {
         get {

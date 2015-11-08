@@ -32,11 +32,17 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         get {
             return Int(monthStepper.value)
         }
+        set {
+            monthStepper.value = Double(newValue)
+        }
     }
     
     var year:Int {
         get {
             return Int(yearStepper.value)
+        }
+        set {
+            yearStepper.value = Double(newValue)
         }
     }
     
@@ -44,23 +50,18 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         super.viewDidLoad()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "hideKeyboard"))
-
-        textFields.forEach({$0.delegate = self })
         
         validator.registerField(nameField, rules: [RequiredRule()])
         validator.registerField(cardNumberField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 16), MaxLengthRule(length: 16)])
         validator.registerField(cvvField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 3), MaxLengthRule(length: 4)])
         validator.registerField(zipField, rules: [RequiredRule(), ZipCodeRule()])
         
-        monthStepper.value = Double(NSCalendar.currentCalendar().component(.Month, fromDate: NSDate()))
-        monthStepper.maximumValue = 12
-        monthStepper.minimumValue = 1
-        monthStepper.wraps = true
+        let components = NSCalendar.currentCalendar().components([.Year, .Month], fromDate: NSDate())
         
-        yearStepper.value = Double(NSCalendar.currentCalendar().component(.Year, fromDate: NSDate()))
-        yearStepper.maximumValue = 9999
-        yearStepper.minimumValue = 1
-        yearStepper.wraps = true
+        print(components)
+        
+        month = components.month
+        year = components.year
         
         stepperChanged(monthStepper)
     }
@@ -78,7 +79,7 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         let card = CreditCard()
         
         card.holderName = nameField.text!
-        card.cardNumber = Int(cardNumberField.text!)!
+        card.cardNumber = Int64(cardNumberField.text!)!
         card.cvv = Int(cvvField.text!)!
         card.zipcode = Int(zipField.text!)!
         card.expireMonth = month

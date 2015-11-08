@@ -19,6 +19,7 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

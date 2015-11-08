@@ -17,16 +17,24 @@ class CardSource {
     static let userDefaults = NSUserDefaults.standardUserDefaults()
     
     static func getCards() -> [CreditCard] {
-        if let cards = userDefaults.objectForKey(key) as! [CreditCard]? {
-            return cards
-        }else{
-            return [CreditCard()] //save one card by default
-        }
+        return getOrPopulate().map({ NSKeyedUnarchiver.unarchiveObjectWithData($1) as! CreditCard })
     }
     
     static func saveCard(card: CreditCard) {
-        var cards = getCards()
-        cards.append(card)
+        let id = String(card.number)
+        var cards = getOrPopulate()
+        cards[id] = NSKeyedArchiver.archivedDataWithRootObject(card)
         userDefaults.setObject(cards, forKey: key)
+    }
+    
+    private static func getOrPopulate() -> [String:NSData]{
+        if let cards = userDefaults.objectForKey(key) as! [String:NSData]? {
+            return cards
+        }else{
+            let card = CreditCard() //default card
+            let cards = [String(card.number): NSKeyedArchiver.archivedDataWithRootObject(card)]
+            userDefaults.setObject(cards, forKey: key)
+            return cards
+        }
     }
 }

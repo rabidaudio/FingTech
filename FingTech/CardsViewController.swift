@@ -60,18 +60,6 @@ class CardsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
-    
-    //UIAlertController(title: "Success", message: "You are validated!", preferredStyle: UIAlertControllerStyle.Alert)
-    
-    //        let card = items[indexPath.row]
-    //        let amount = 15.00
-    //        card.charge(amount) { (success:Bool) -> Void in
-    //            if(success){
-    //                UIAlertView(title: "Success", message: "Your card has been charged $\(amount).", delegate: nil, cancelButtonTitle: "Awesome!").show()
-    //            }else{
-    //                UIAlertView(title: "Failure", message: "There was a problem processing the payment. Your card has not been charged.", delegate: nil, cancelButtonTitle: "Dag, yo").show()
-    //            }
-    //        }
 
 }
 

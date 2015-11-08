@@ -14,9 +14,10 @@
 		CEEB6A311BEEC6AA001EDC68 /* SwiftValidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A2E1BEEC691001EDC68 /* SwiftValidator.framework */; };
 		CEEB6A321BEEC6AA001EDC68 /* SwiftValidator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A2E1BEEC691001EDC68 /* SwiftValidator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEEB6A361BEFD682001EDC68 /* CardSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB6A351BEFD682001EDC68 /* CardSource.swift */; };
+		CEEB6A381BEFEFED001EDC68 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB6A371BEFEFED001EDC68 /* LocalAuthentication.framework */; };
 		CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */; };
 		CEECE7E61BEDAF0900C5D581 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */; };
-		CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */; };
+		CEECE7E81BEDAF0900C5D581 /* MerchantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEECE7E71BEDAF0900C5D581 /* MerchantViewController.swift */; };
 		CEECE7EB1BEDAF0A00C5D581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEECE7E91BEDAF0A00C5D581 /* Main.storyboard */; };
 		CEECE7ED1BEDAF0A00C5D581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */; };
 		CEECE7F01BEDAF0A00C5D581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */; };
@@ -153,10 +154,11 @@
 		CEEB6A201BEEA29F001EDC68 /* EditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCardViewController.swift; sourceTree = "<group>"; };
 		CEEB6A221BEEC690001EDC68 /* Validator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Validator.xcodeproj; path = SwiftValidator/Validator.xcodeproj; sourceTree = "<group>"; };
 		CEEB6A351BEFD682001EDC68 /* CardSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSource.swift; sourceTree = "<group>"; };
+		CEEB6A371BEFEFED001EDC68 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		CEECE7E01BEDAF0900C5D581 /* FingTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
-		CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CEECE7E71BEDAF0900C5D581 /* MerchantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantViewController.swift; sourceTree = "<group>"; };
 		CEECE7EA1BEDAF0A00C5D581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEECE7EF1BEDAF0A00C5D581 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEB6A381BEFEFED001EDC68 /* LocalAuthentication.framework in Frameworks */,
 				CEEB6A1B1BEE7A39001EDC68 /* Alamofire.framework in Frameworks */,
 				CEEB6A311BEEC6AA001EDC68 /* SwiftValidator.framework in Frameworks */,
 			);
@@ -224,6 +227,7 @@
 		CEECE7D71BEDAF0900C5D581 = {
 			isa = PBXGroup;
 			children = (
+				CEEB6A371BEFEFED001EDC68 /* LocalAuthentication.framework */,
 				CEECE7E21BEDAF0900C5D581 /* FingTech */,
 				CEECE7F91BEDAF0A00C5D581 /* FingTechTests */,
 				CEECE8041BEDAF0A00C5D581 /* FingTechUITests */,
@@ -248,7 +252,7 @@
 			children = (
 				CEECE7E31BEDAF0900C5D581 /* AppDelegate.swift */,
 				CEECE7E51BEDAF0900C5D581 /* CardsViewController.swift */,
-				CEECE7E71BEDAF0900C5D581 /* SecondViewController.swift */,
+				CEECE7E71BEDAF0900C5D581 /* MerchantViewController.swift */,
 				CEECE7E91BEDAF0A00C5D581 /* Main.storyboard */,
 				CEECE7EC1BEDAF0A00C5D581 /* Assets.xcassets */,
 				CEECE7EE1BEDAF0A00C5D581 /* LaunchScreen.storyboard */,
@@ -504,7 +508,7 @@
 			files = (
 				CEEB6A361BEFD682001EDC68 /* CardSource.swift in Sources */,
 				CEEB69501BEE7318001EDC68 /* CreditCard.swift in Sources */,
-				CEECE7E81BEDAF0900C5D581 /* SecondViewController.swift in Sources */,
+				CEECE7E81BEDAF0900C5D581 /* MerchantViewController.swift in Sources */,
 				CEEB6A211BEEA29F001EDC68 /* EditCardViewController.swift in Sources */,
 				CEECE7E41BEDAF0900C5D581 /* AppDelegate.swift in Sources */,
 				CEECE7E61BEDAF0900C5D581 /* CardsViewController.swift in Sources */,

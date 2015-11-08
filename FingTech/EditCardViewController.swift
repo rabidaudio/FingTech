@@ -9,7 +9,7 @@
 import UIKit
 import SwiftValidator
 
-class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationDelegate {
+class EditCardViewController: UIViewController, ValidationDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var cardNumberField: UITextField!
@@ -23,12 +23,6 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
     let validator = Validator()
     
     var card:CreditCard?
-    
-    var textFields:[UITextField] {
-        get {
-            return [nameField, cardNumberField, cvvField, zipField]
-        }
-    }
     
     var month:Int {
         get {
@@ -51,28 +45,33 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //closable keyboard
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "hideKeyboard"))
         
+        //if this is an edit form instead of a create form, fill out fields with existing data
         if(card != nil){
             populateFields(card!)
         }
         
+        //validators for text fields
         validator.registerField(nameField, rules: [RequiredRule()])
         validator.registerField(cardNumberField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 16), MaxLengthRule(length: 16)])
         validator.registerField(cvvField, rules: [RequiredRule(), FloatRule(), MinLengthRule(length: 3), MaxLengthRule(length: 4)])
         validator.registerField(zipField, rules: [RequiredRule(), ZipCodeRule()])
         
+        //default expires is current month
         let components = NSCalendar.currentCalendar().components([.Year, .Month], fromDate: NSDate())
-        
-        print(components)
-        
         month = components.month
         year = components.year
         
-        stepperChanged(monthStepper)
+        updateExires()
     }
     
     @IBAction func stepperChanged(sender: UIStepper) {
+        updateExires()
+    }
+    
+    func updateExires(){
         expiresText.text = String(format: "%02d / %04d", month, year)
     }
     
@@ -81,15 +80,11 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
     }
     
     func validationSuccessful() {
-        
         if(card == nil){
-            card = populateCard(CreditCard())
+            populateCard(CreditCard())
         }else{
-            card = populateCard(card!)
+            populateCard(card!)
         }
-        print(card)
-        
-        //TODO store card
     }
     
     func populateFields(card: CreditCard){
@@ -99,9 +94,10 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         zipField.text = String(card.zipcode)
         month = card.expireMonth
         year = card.expireYear
+        updateExires()
     }
     
-    func populateCard(card: CreditCard) -> CreditCard {
+    func populateCard(card: CreditCard) {
         card.holderName = nameField.text!
         card.number = Int64(cardNumberField.text!)!
         card.cvv = Int(cvvField.text!)!
@@ -109,7 +105,8 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         card.expireMonth = month
         card.expireYear = year
         
-        return card
+        CardSource.saveCard(card)
+        navigationController!.popViewControllerAnimated(true) //close window
     }
     
     func validationFailed(errors:[UITextField:ValidationError]) {
@@ -122,9 +119,9 @@ class EditCardViewController: UIViewController, UITextFieldDelegate, ValidationD
         }
     }
     
-    func textFieldDidBeginEditing(textField: UITextField){
-        textField.layer.borderColor = nil
-        textField.layer.borderWidth = 0
+    @IBAction func resetBorders(sender: UITextField) {
+        sender.layer.borderColor = nil
+        sender.layer.borderWidth = 0
     }
     
     func hideKeyboard(){
